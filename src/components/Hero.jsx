@@ -11,10 +11,13 @@ const Hero = () => {
       component="section"
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "center",
+        textAlign: "center",
+        gap: { xs: 4, md: 8 },
         minHeight: "90vh",
-        px: 3,
+        px: 6,
         backgroundColor: "#121212",
         color: "#fff",
       }}
@@ -22,7 +25,7 @@ const Hero = () => {
       <Avatar
         src={avatar}
         alt="Rania"
-        sx={{ width: "200px", height: "200px", mr: 4 }}
+        sx={{ width: "200px", height: "200px", mr: { md: 4 } }}
       />
       <Box
         sx={{
