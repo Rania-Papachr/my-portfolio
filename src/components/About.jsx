@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container"; //a layout component used to center your content and set a max-width, so your text and elements don’t stretch too wide on large screens.
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack"; //a layout component that arranges elements: In a row or in a column.With automatic spacing between them like a cleaner, easier Flexbox.
+import Stack from "@mui/material/Stack"; //a layout component that arranges elements: In a row or in a column. With automatic spacing between them like a cleaner, easier Flexbox.
 import Divider from "@mui/material/Divider";
 
 const About = () => {

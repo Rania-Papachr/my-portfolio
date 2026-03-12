@@ -2,6 +2,7 @@ import Toolbar from "@mui/material/Toolbar";
 import DrawerAppBar from "./components/DrawerAppBar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Toolbar />
       <Hero />
       <About />
+      <Skills />
     </>
   );
 }
