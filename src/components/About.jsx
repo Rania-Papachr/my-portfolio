@@ -19,7 +19,13 @@ const About = () => {
             About Me
           </Typography>
           <Divider
-            sx={{ backgroundColor: "#fff", width: "100px", mx: "auto", my: 2 }}
+            sx={{
+              backgroundColor: "#1de9b6",
+              width: "150px",
+              height: "1.6px",
+              mx: "auto",
+              my: 2,
+            }}
           />
           <Typography
             variant="body1"
