@@ -1,8 +1,4 @@
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Divider from "@mui/material/Divider";
-import Grid from "@mui/material/Grid";
+import { Typography, Box, Container, Divider } from "@mui/material";
 
 import ProjectCard from "./ProjectCard";
 import projects from "../data/projects";

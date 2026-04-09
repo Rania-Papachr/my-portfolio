@@ -1,15 +1,8 @@
-import Container from "@mui/material/Container"; //a layout component used to center your content and set a max-width, so your text and elements don’t stretch too wide on large screens.
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack"; //a layout component that arranges elements: In a row or in a column. With automatic spacing between them like a cleaner, easier Flexbox.
-import Divider from "@mui/material/Divider";
+import { Container, Box, Typography, Stack, Divider } from "@mui/material";
 
 const About = () => {
   return (
-    <Box
-      component="section"
-      sx={{ bgcolor: "#121212", color: "#fff", py: { xs: 8, md: 12 } }}
-    >
+    <Box component="section" sx={{ py: { xs: 8, md: 12 } }}>
       <Container maxWidth="md">
         <Stack spacing={4} alignItems="center">
           <Typography

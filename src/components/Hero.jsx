@@ -1,7 +1,4 @@
-import Box from "@mui/material/Box";
-import Avatar from "@mui/material/Avatar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import { Box, Avatar, Typography, Button } from "@mui/material";
 
 import avatar from "../assets/images/avatar-zoom.png";
 
