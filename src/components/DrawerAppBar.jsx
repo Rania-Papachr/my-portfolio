@@ -1,18 +1,20 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar"; //The top navigation bar.
-import Box from "@mui/material/Box"; // Its a div just with MUI superpowers. Use it for layout and spacing.
-import CssBaseline from "@mui/material/CssBaseline"; //This resets and normalizes default browser styles. It makes the app look consistent in Chrome Firefox and Safari.
-import Divider from "@mui/material/Divider"; //The thin horizontal line inside the mobile drawer.
-import Drawer from "@mui/material/Drawer"; //The side menu that slides in on mobile when you click ☰.
-import IconButton from "@mui/material/IconButton"; //It’s a button specifically designed for icons. Its the clickable button that holds the hamburger icon.
-import List from "@mui/material/List"; // It's like <ul> in HTML.
-import ListItem from "@mui/material/ListItem"; //like <li> in HTML.
-import ListItemButton from "@mui/material/ListItemButton"; // Makes each list item clickable like a button. So instead of plain text, it behaves like a menu link.
-import ListItemText from "@mui/material/ListItemText"; //This just displays the text inside each item.
+import {
+  AppBar,
+  Box,
+  CssBaseline,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+  Typography,
+  Button,
+} from "@mui/material"; //The top navigation bar.
 import MenuIcon from "@mui/icons-material/Menu"; //This is the actual hamburger icon ☰ inside the button.
-import Toolbar from "@mui/material/Toolbar"; //This is the inner container inside the AppBar. Almost always needed.
-import Typography from "@mui/material/Typography"; //Instead of <h1>, <h2>, <p>.
-import Button from "@mui/material/Button"; //The desktop menu buttons.
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -52,7 +54,6 @@ const DrawerAppBar = (props) => {
       <AppBar
         component="nav"
         sx={{
-          backgroundColor: "#121212",
           borderBottom: "1px solid rgba(255,255,255,0.05)",
         }}
       >
