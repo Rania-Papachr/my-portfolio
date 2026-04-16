@@ -1,7 +1,7 @@
 import { Typography, Container, Box, Divider, Grid } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ContactRow from "./ContactRow";
-import { contactData } from "../data/contactData";
+import { contactData } from "../../data/contactData";
 
 const Contact = () => {
   return (
