@@ -4,6 +4,7 @@ import skills from "../data/skills";
 const Skills = () => {
   return (
     <Box
+      id="skills"
       component="section"
       sx={{ bgcolor: "#121212", color: "#fff", py: { xs: 8, md: 12 } }}
     >

@@ -6,6 +6,7 @@ import { contactData } from "../../data/contactData";
 const Contact = () => {
   return (
     <Box
+      id="contact"
       component="section"
       sx={{ backgroundColor: "#121212", color: "#fff", py: { xs: 8, md: 12 } }}
     >

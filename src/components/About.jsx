@@ -2,7 +2,7 @@ import { Container, Box, Typography, Stack, Divider } from "@mui/material";
 
 const About = () => {
   return (
-    <Box component="section" sx={{ py: { xs: 8, md: 12 } }}>
+    <Box id="about" component="section" sx={{ py: { xs: 8, md: 12 } }}>
       <Container maxWidth="md">
         <Stack spacing={4} alignItems="center">
           <Typography
