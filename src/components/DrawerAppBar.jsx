@@ -19,13 +19,44 @@ import MenuIcon from "@mui/icons-material/Menu"; //This is the actual hamburger 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
-const DrawerAppBar = (props) => {
-  const { window } = props;
+const DrawerAppBar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState("home");
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "about", "skills", "projects", "contact"];
+
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (!element) return;
+
+        const rect = element.getBoundingClientRect();
+        //getBoundingClientRect() gives you the position and size of the element you selected, relative to what you currently see on the screen.
+        //so rect is an object with positions like: {top:.., right,bottom:.. , left:.., width etc}
+        //position relative to the visible viewport
+
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          setActiveSection(id); //set the section with this id active .
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -36,7 +67,13 @@ const DrawerAppBar = (props) => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => {
+                scrollToSection(item.toLowerCase());
+                handleDrawerToggle();
+              }}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -45,8 +82,7 @@ const DrawerAppBar = (props) => {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const container = undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -77,9 +113,11 @@ const DrawerAppBar = (props) => {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
+                onClick={() => scrollToSection(item.toLowerCase())}
                 key={item}
                 sx={{
-                  color: "#fff",
+                  color:
+                    activeSection === item.toLowerCase() ? "#1de9b6" : "#fff",
                   "&:hover": {
                     color: "#1de9b6",
                     backgroundColor: "transparent",

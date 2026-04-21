@@ -5,7 +5,6 @@ import { KeyboardArrowUp } from "@mui/icons-material";
 const ScrollToTop = () => {
   const [show, setShow] = useState(false);
 
-  // 👇 Show button after scrolling
   useEffect(() => {
     const handleScroll = () => {
       setShow(window.scrollY > 300);
@@ -16,7 +15,6 @@ const ScrollToTop = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 👇 Scroll to top
   const handleClick = () => {
     window.scrollTo({
       top: 0,

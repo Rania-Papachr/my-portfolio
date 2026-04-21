@@ -6,6 +6,7 @@ import projects from "../../data/projects";
 const Projects = () => {
   return (
     <Box
+      id="projects"
       component="section"
       sx={{ backgroundColor: "#121212", color: "#fff", py: { xs: 8, md: 12 } }}
     >

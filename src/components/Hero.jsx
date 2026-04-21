@@ -5,6 +5,7 @@ import avatar from "../assets/images/avatar-zoom.png";
 const Hero = () => {
   return (
     <Box
+      id="home"
       component="section"
       sx={{
         display: "flex",
