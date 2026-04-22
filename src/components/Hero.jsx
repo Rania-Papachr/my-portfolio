@@ -2,7 +2,7 @@ import { Box, Avatar, Typography, Button } from "@mui/material";
 
 import avatar from "../assets/images/avatar-zoom.png";
 
-const Hero = () => {
+const Hero = ({ onScrollToProjects }) => {
   return (
     <Box
       id="home"
@@ -40,6 +40,7 @@ const Hero = () => {
           I love turning ideas into beautiful, functional websites.
         </Typography>
         <Button
+          onClick={onScrollToProjects}
           variant="contained"
           sx={{
             backgroundColor: "#1de9b6",
