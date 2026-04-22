@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import Toolbar from "@mui/material/Toolbar";
 import DrawerAppBar from "./components/DrawerAppBar";
 import Hero from "./components/Hero";
@@ -8,14 +10,23 @@ import Contact from "./components/ContactSection/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  const projectsRef = useRef(null);
+
+  const handleScrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <DrawerAppBar />
       <Toolbar />
-      <Hero />
+      <Hero onScrollToProjects={handleScrollToProjects} />
       <About />
       <Skills />
-      <Projects />
+      <section ref={projectsRef} id="projects">
+        <Projects />
+      </section>
       <Contact />
 
       <ScrollToTop />
