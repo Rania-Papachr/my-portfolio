@@ -15,6 +15,7 @@ import {
   Button,
 } from "@mui/material"; //The top navigation bar.
 import MenuIcon from "@mui/icons-material/Menu"; //This is the actual hamburger icon ☰ inside the button.
+import Logo from "./Logo";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -94,22 +95,23 @@ const DrawerAppBar = () => {
         }}
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              cursor: "pointer",
+            }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            Rania's Portfolio
-          </Typography>
+            <Logo />
+            <Typography
+              variant="subtitle1"
+              sx={{ fontWeight: 500, color: "#fff", ml: 3 }}
+            >
+              Rania's Portfolio
+            </Typography>
+          </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
@@ -128,6 +130,15 @@ const DrawerAppBar = () => {
               </Button>
             ))}
           </Box>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <nav>

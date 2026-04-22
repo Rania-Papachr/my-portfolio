@@ -8,7 +8,12 @@ const Contact = () => {
     <Box
       id="contact"
       component="section"
-      sx={{ backgroundColor: "#121212", color: "#fff", py: { xs: 8, md: 12 } }}
+      sx={{
+        backgroundColor: "#121212",
+        color: "#fff",
+        py: { xs: 8, md: 12 },
+        mb: 10,
+      }}
     >
       <Container maxWidth="lg">
         <Typography
