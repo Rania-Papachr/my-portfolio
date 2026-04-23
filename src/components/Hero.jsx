@@ -16,8 +16,6 @@ const Hero = ({ onScrollToProjects }) => {
         gap: { xs: 4, md: 8 },
         minHeight: "90vh",
         px: 6,
-        backgroundColor: "#121212",
-        color: "#fff",
       }}
     >
       <Avatar
@@ -33,7 +31,7 @@ const Hero = ({ onScrollToProjects }) => {
           gap: 3,
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+        <Typography variant="h4" fontWeight="bold">
           Hi, I'm Rania - Junior Frontend Developer
         </Typography>
         <Typography variant="subtitle1">
@@ -43,8 +41,8 @@ const Hero = ({ onScrollToProjects }) => {
           onClick={onScrollToProjects}
           variant="contained"
           sx={{
-            backgroundColor: "#1de9b6",
-            color: "#121212",
+            backgroundColor: "primary.main",
+            color: "background.default",
             borderRadius: "6px",
             textTransform: "none",
             "&:hover": { backgroundColor: "#4ef4c6" },

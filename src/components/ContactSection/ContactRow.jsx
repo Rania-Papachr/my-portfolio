@@ -6,7 +6,7 @@ const ContactRow = ({ icon: Icon, label, value, link }) => {
       <Box sx={{ display: "flex", alignItems: "center", mb: 0.5 }}>
         {Icon && <Icon sx={{ color: "primary.main", mr: 1 }} />}
 
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+        <Typography variant="body2" color="text.secondary">
           {label}
         </Typography>
       </Box>
@@ -16,10 +16,10 @@ const ContactRow = ({ icon: Icon, label, value, link }) => {
         href={link}
         target="_blank"
         variant="body1"
+        fontWeight="500"
+        color="text.primary"
         sx={{
-          fontWeight: 500,
           textDecoration: "none",
-          color: "text.primary",
           "&:hover": link && {
             color: "primary.main",
             cursor: "pointer",

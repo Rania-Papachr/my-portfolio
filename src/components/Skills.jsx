@@ -3,17 +3,13 @@ import skills from "../data/skills";
 
 const Skills = () => {
   return (
-    <Box
-      id="skills"
-      component="section"
-      sx={{ bgcolor: "#121212", color: "#fff", py: { xs: 8, md: 12 } }}
-    >
+    <Box id="skills" component="section" sx={{ py: { xs: 8, md: 12 } }}>
       <Container maxWidth="md">
         <Typography
           variant="h4"
+          fontWeight="bold"
           sx={{
             textAlign: "center",
-            fontWeight: "bold",
             letterSpacing: 1,
             mb: 4,
           }}
@@ -22,7 +18,7 @@ const Skills = () => {
         </Typography>
         <Divider
           sx={{
-            backgroundColor: "#1de9b6",
+            backgroundColor: "primary.main",
             width: "150px",
             height: "1.5px",
             mx: "auto",
