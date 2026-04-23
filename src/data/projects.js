@@ -1,4 +1,5 @@
 import placesCRUD from "../assets/images/places-app-prtSc.png";
+import portfolioImg from "../assets/images/portfolio-prtSc.png";
 
 const projects = [
   {
@@ -6,15 +7,15 @@ const projects = [
     title: "Places CRUD App",
     description: "A React app to add, edit and delete places.",
     tech: ["React", "JavaScript"],
-    github: "",
-    demo: "",
+    github: "https://github.com/Rania-Papachr/places-app",
+    demo: "https://places-app-b5111.web.app/",
   },
   {
-    image: placesCRUD,
+    image: portfolioImg,
     title: "Developer Portfolio",
     description: "My personal portfolio built with React and MUI.",
     tech: ["React", "Material UI"],
-    github: "",
+    github: "https://github.com/Rania-Papachr/my-portfolio",
     demo: "",
   },
   {

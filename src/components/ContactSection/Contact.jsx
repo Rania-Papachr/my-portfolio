@@ -9,8 +9,8 @@ const Contact = () => {
       id="contact"
       component="section"
       sx={{
-        backgroundColor: "#121212",
-        color: "#fff",
+        backgroundColor: "background.default",
+        color: "text.primary",
         py: { xs: 8, md: 12 },
         mb: 10,
       }}
@@ -24,7 +24,7 @@ const Contact = () => {
         </Typography>
         <Divider
           sx={{
-            backgroundColor: "#1de9b6",
+            backgroundColor: "primary.main",
             width: "150px",
             height: "1.5px",
             mx: "auto",

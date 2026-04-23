@@ -1,15 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-// const ContactRowValue = styled(Typography)({
-//   fontWeight: 500,
-//   textDecoration: "none",
-//   color: "#fff",
-//   "&:hover": {
-//     color: "#1de9b6",
-//     cursor: "pointer",
-//   },
-// });
-
 const ContactRow = ({ icon: Icon, label, value, link }) => {
   return (
     <Box sx={{ mb: 3 }}>
