@@ -13,7 +13,7 @@ const About = () => {
           </Typography>
           <Divider
             sx={{
-              backgroundColor: "#1de9b6",
+              backgroundColor: "primary.main",
               width: "150px",
               height: "1.6px",
               mx: "auto",

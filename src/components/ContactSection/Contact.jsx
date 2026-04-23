@@ -9,8 +9,6 @@ const Contact = () => {
       id="contact"
       component="section"
       sx={{
-        backgroundColor: "background.default",
-        color: "text.primary",
         py: { xs: 8, md: 12 },
         mb: 10,
       }}
@@ -18,7 +16,8 @@ const Contact = () => {
       <Container maxWidth="lg">
         <Typography
           variant="h4"
-          sx={{ fontWeight: "bold", letterSpacing: 1, textAlign: "center" }}
+          fontWeight="bold"
+          sx={{ letterSpacing: 1, textAlign: "center" }}
         >
           Get In Touch
         </Typography>

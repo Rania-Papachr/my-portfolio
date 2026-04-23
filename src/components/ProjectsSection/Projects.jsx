@@ -5,11 +5,7 @@ import projects from "../../data/projects";
 
 const Projects = () => {
   return (
-    <Box
-      id="projects"
-      component="section"
-      sx={{ backgroundColor: "#121212", color: "#fff", py: { xs: 8, md: 12 } }}
-    >
+    <Box id="projects" component="section" sx={{ py: { xs: 8, md: 12 } }}>
       <Container maxWidth="lg">
         <Typography
           variant="h4"
@@ -19,7 +15,7 @@ const Projects = () => {
         </Typography>
         <Divider
           sx={{
-            backgroundColor: "#1de9b6",
+            backgroundColor: "primary.main",
             width: "150px",
             height: "1.5px",
             mx: "auto",

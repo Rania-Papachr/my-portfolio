@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useEffect, useState } from "react";
 import {
   AppBar,
   Box,
@@ -17,12 +17,12 @@ import {
 import MenuIcon from "@mui/icons-material/Menu"; //This is the actual hamburger icon ☰ inside the button.
 import Logo from "./Logo";
 
-const drawerWidth = 240;
+const drawerWidth = 160;
 const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
 const DrawerAppBar = () => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [activeSection, setActiveSection] = React.useState("home");
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -33,7 +33,7 @@ const DrawerAppBar = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "skills", "projects", "contact"];
 
@@ -60,8 +60,8 @@ const DrawerAppBar = () => {
   }, []);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "right", px: 2 }}>
+      <Typography variant="h6" sx={{ my: 2, textAlign: "right" }}>
         Rania's Portfolio
       </Typography>
       <Divider />
@@ -69,7 +69,14 @@ const DrawerAppBar = () => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
-              sx={{ textAlign: "center" }}
+              sx={{
+                textAlign: "right",
+                justifyContent: "flex-end",
+                color:
+                  activeSection === item.toLowerCase()
+                    ? "primary.main"
+                    : "text.primary",
+              }}
               onClick={() => {
                 scrollToSection(item.toLowerCase());
                 handleDrawerToggle();
@@ -97,18 +104,14 @@ const DrawerAppBar = () => {
         <Toolbar>
           <Box
             sx={{
-              flexGrow: 1,
               display: "flex",
+              flexGrow: 1,
               alignItems: "center",
               gap: 1,
-              cursor: "pointer",
             }}
           >
             <Logo />
-            <Typography
-              variant="subtitle1"
-              sx={{ fontWeight: 500, color: "#fff", ml: 3 }}
-            >
+            <Typography variant="subtitle1" fontWeight="500" sx={{ ml: 3 }}>
               Rania's Portfolio
             </Typography>
           </Box>
@@ -119,9 +122,11 @@ const DrawerAppBar = () => {
                 key={item}
                 sx={{
                   color:
-                    activeSection === item.toLowerCase() ? "#1de9b6" : "#fff",
+                    activeSection === item.toLowerCase()
+                      ? "primary.main"
+                      : "text.primary",
                   "&:hover": {
-                    color: "#1de9b6",
+                    color: "primary.main",
                     backgroundColor: "transparent",
                   },
                 }}
@@ -133,9 +138,9 @@ const DrawerAppBar = () => {
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            edge="start"
+            edge="end"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
@@ -143,6 +148,7 @@ const DrawerAppBar = () => {
       </AppBar>
       <nav>
         <Drawer
+          anchor="right"
           container={container}
           variant="temporary"
           open={mobileOpen}
@@ -155,6 +161,9 @@ const DrawerAppBar = () => {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              px: 2,
+              pt: 2,
+              borderLeft: "1px solid rgba(255,255,255,0.08)",
             },
           }}
         >
